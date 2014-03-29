@@ -1,0 +1,60 @@
+.top{
+    color: white;
+    height: 190px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 55px;
+    border-left: 1px solid white;
+    h1{
+        margin-top: 30px;
+        margin-bottom: 20px;
+        color: $cream;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 5px rgba(0,0,0,.2);
+    }
+    small{
+        font-family: 'Quattrocento', serif;
+        line-height: 25px;
+    }
+    blockquote{
+        padding: 20px 0 0 0;
+        border-left: 0;
+        font-weight: 200;
+        font-style: italic;
+    }
+}
+
+.content{
+    position: relative;
+    width: 100%;
+    padding: 30px 0;
+    background: white;
+    a{
+        color: blue;
+    }
+    &:before{
+        position: absolute;
+        top: -37px;
+        left: 0;
+        width: 100%;
+        height: 65px;
+        background: url('/images/gradient-views.png') repeat-x bottom left;
+        @include opacity(.5);
+        z-index: -1;
+    }
+}
+
+.masonry-box{
+    width: 735px;
+    margin: 0 auto;
+}
+
+.masonry-brick {
+    margin: 5px 5px 0px 0px;
+    float: left;
+}
+
+.masonry-brick img{
+    width: 240px;
+    // max-width: 450px;
+}

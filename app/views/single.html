@@ -1,0 +1,17 @@
+<div class="top container center-block">
+    <h1 class="alpha">{{ slug }}</h1>
+    <small class="bravo">{{ desc }}</small>
+    <blockquote>Visit: <a class="link" ng-href="http://{{ url }}" target="_blank" title="{{ slug }}">{{ url }}</a></blockquote>
+</div>
+<div class="breadcrumb-block">
+    <ol class="breadcrumb container" ng-controller="NavCtrl">
+      <li><a ng-href="#/" ng-click="hideBg()"><span class="glyphicon glyphicon-th"></span></a></li>
+      <li><a ng-href="#portfolio/{{ category }}">{{ category }}</a></li>
+      <li class="active">{{ slug }}</li>
+    </ol>
+</div>
+<div class="content">
+    <ul class="portfolio-items list-unstyled container">
+        <li ng-repeat="img in imgs"><img ng-src="/images/portfolio/{{ category }}/{{ id }}/{{ img }}.jpg" alt="" /></li>
+    </ul>
+</div>

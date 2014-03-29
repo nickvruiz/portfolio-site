@@ -1,0 +1,17 @@
+.btn{
+    color: white;
+    height: 44px;
+    padding: 0 22px;
+    line-height: 44px;
+    font-weight: 300;
+    letter-spacing: .5px;
+    background: none;
+    border: 1px solid white;
+    @include border-radius(22px, 22px);
+    @include single-transition(all, 200ms, ease-in-out);
+    &:hover{
+        color: white;
+        background: rgba(255, 255, 255, .2);
+        border: 1px solid white;
+    }
+}
