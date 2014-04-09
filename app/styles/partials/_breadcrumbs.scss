@@ -2,7 +2,7 @@
     width: 100%;
     height: 100px;
     line-height: 100px;
-    background: rgba(255, 255, 255, .2);
+    background: rgba(255, 255, 255, .1);
 }
 
 .breadcrumb{
@@ -12,13 +12,12 @@
     font-size: $bravo;
     text-transform: uppercase;
     background: none;
-    // @include opacity(.8);
     li{
         font-weight: 200;
     }
     .active{
         color: white;
-        font-weight: 400;
+        font-weight: 300;
         a{
             padding-bottom: 5px;
             color: white;

@@ -1,9 +1,17 @@
+/* Fonts */
+$lato:   'Lato', sans-serif;
+$quatto: 'Quattrocento', serif;
+$fa:     'FontAwesome';
+
 /* Font size */
 $alpha: 2.769em;
 $bravo: 1.385em;
 
 /* Color palette */
-$cream: #E5E3D7;
+$med-grey:  #AEAEAE;
+$lgt-grey:  #E9E9E9;
+$drk-green: #655B45;
+$gry-block: #2F2F2F;
 
 .full-bg{
     @include background-size(cover);
@@ -16,7 +24,7 @@ html{
     height: 100%;
     font-size: 14px;
     line-height: 18px;
-    font-family: 'Lato', sans-serif;
+    font-family: $lato;
     background: url('/images/foggy-road-bg.jpg') fixed no-repeat center;
 }
 
@@ -30,18 +38,11 @@ a{
     }
 }
 
-.link{
-    padding-bottom: 1px;
-    margin-left: 5px;
-    color: white;
-    font-weight: 300;
-    letter-spacing: .5px;
-    border-bottom: 1px dashed white;
-    &:hover{
-        color: $cream;
-        border-bottom: 1px dashed $cream;
-    }
-}
+.lato   { font-family: $lato; }
+.quattro{ font-family: $quatto; }
+.fa     { font-family: $fa; }
+
+.nopadding{ padding: 0; }
 
 #body-wrapper{
     top: 0;
@@ -58,7 +59,6 @@ a{
     width: 100%;
     height: 100%;
     z-index: 2;
-    // overflow: hidden;
 }
 
 #page{

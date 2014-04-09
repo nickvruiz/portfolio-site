@@ -3,6 +3,7 @@
 angular.module('webApp')
   .controller('PortfolioCtrl', function ($scope, $routeParams, PortfolioRepo) {
 
+    $scope.thumbHover = true;
     $scope.category = $routeParams.category;
 
     if($routeParams.category == 'web') {

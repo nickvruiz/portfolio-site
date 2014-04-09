@@ -1,28 +1,49 @@
+<!-- Title and description -->
 <div class="top container center-block">
     <h1 class="alpha">{{ category }}</h1>
     <small class="bravo">{{ description }}</small>
-    <blockquote>"Going to put an inspirational quote in here" - nick</blockquote>
+    <div class="testimonial clearfix">
+        <img src="/images/testimonial-jac.jpg" alt="" class="img-circle">
+        <blockquote>"Going to put an inspirational quote in here" - nick</blockquote>
+    </div>
 </div>
+
+<!-- Breadcrumbs -->
 <div class="breadcrumb-block">
     <ol class="breadcrumb container" ng-controller="NavCtrl">
-        <li><a ng-href="#/" ng-click="hideBg()"><span class="glyphicon glyphicon-th"></span></a></li>
-        <li ng-class="{ active: category == 'web' }"><a ng-href="#portfolio/web">Web</a></li>
-        <li ng-class="{ active: category == 'photo' }"><a ng-href="#portfolio/photo">Photo</a></li>
-        <li ng-class="{ active: category == 'video' }"><a ng-href="#portfolio/video">Video</a></li>
-        <li ng-class="{ active: category == 'about' }"><a ng-href="#portfolio/about">About</a></li>
-        <li ng-class="{ active: category == 'blog' }"><a ng-href="#portfolio/blog">Blog</a></li>
-        <li ng-class="{ active: category == 'contact' }"><a ng-href="#portfolio/contact">Contact</a></li>
+        <li><a ng-href="#/" title="Show Menu" ng-click="hideBg()"><span class="glyphicon glyphicon-th"></span></a></li>
+        <li class="active">{{ category }}</li>
     </ol>
 </div>
+
+<!-- Portfolio items -->
 <div class="content">
     <div class="container">
         <div class="row">
-            <div class="col-md-4" ng-repeat="item in items | filter: { category: category}" ng-init="thumbHover = true" ng-mouseenter="thumbHover = false" ng-mouseleave="thumbHover = true">
-                <a class="thumbnail" href="#portfolio/{{ category }}/{{ item.id }}" title="">
-                    <img ng-src="images/grid/{{ item.id }}.jpg" alt="">
+            <div class="col-md-4 nopadding" ng-repeat="item in items | filter: { category: category}">
+                <a class="thumbnail" href="#portfolio/{{ category }}/{{ item.id }}" title="{{ item.name }}" ng-mouseenter="thumbHover = false" ng-mouseleave="thumbHover = true">
+                    <img ng-src="images/portfolio/grid/{{ item.id }}.jpg" alt="">
                     <span class="my-elm bravo" ng-hide="thumbHover">{{ item.name }}</span>
                 </a>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Footer -->
+<footer class="content dark-block">
+  <div class="container">
+    <div class="row">
+      <h3 class="lato">Nick V Ruiz</h3>
+    <hr>
+    </div>
+    <div class="row">
+      <a href="">web</a>
+      <a href="">photo</a>
+      <a href="">video</a>
+      <a href="">about</a>
+      <a href="">blog</a>
+      <a href="">contact</a>
+    </div>
+  </div>
+</footer>
