@@ -15,7 +15,7 @@ angular.module('webApp', [
         controller: 'MainCtrl'
       })
 
-      .when('/portfolio/:category', {
+      .when('/portfolio', {
         templateUrl: 'views/portfolio.html',
         controller: 'PortfolioCtrl'
       })

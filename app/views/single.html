@@ -12,22 +12,23 @@
 <div class="breadcrumb-block">
     <ol class="breadcrumb container" ng-controller="NavCtrl">
       <li><a ng-href="#/" ng-click="hideBg()"><span class="glyphicon glyphicon-th"></span></a></li>
-      <li><a ng-href="#portfolio/{{ category }}">{{ category }}</a></li>
+      <!-- <li><a ng-href="#portfolio/{{ category }}">{{ category }}</a></li> -->
+      <li><a ng-href="#portfolio">PORTFOLIO</a></li>
       <li class="active">{{ slug }}</li>
     </ol>
 </div>
 
 <!-- Portfolio item images -->
 <div class="content" ng-class="{ 'main-block': bar }">
-    <ul class="portfolio-items list-unstyled" ng-class="{ 'container': !bar }">
+    <ul class="portfolio-items list-unstyled center-block" ng-class="{ 'container': !bar }">
         <li ng-repeat="img in imgs">
           <div ng-show="bar" class="bar">
-            <div class="col-md-6 text-left">
+            <div class="col-md-6 col-sm-6 col-xs-6 text-left">
               <fa class="fa fa-circle"></fa>
               <fa class="fa fa-circle"></fa>
               <fa class="fa fa-circle"></fa>
             </div>
-            <div class="col-md-6 text-right"><fa class="fa fa-rotate-right fa-lg"></fa></div>
+            <div class="col-md-6 col-sm-6 col-xs-6 text-right"><fa class="fa fa-rotate-right fa-lg"></fa></div>
           </div>
           <img ng-src="/images/portfolio/{{ id }}/{{ img }}.jpg" alt="" />
         </li>
@@ -54,7 +55,7 @@
 <div class="content">
   <div class="container">
     <div class="row">
-      <div class="col-md-4 nopadding" ng-repeat="item in items">
+      <div class="col-md-4 col-sm-4 col-xs-6 nopadding" ng-repeat="item in items">
         <a class="thumbnail" href="#portfolio/{{ item.category }}/{{ item.id }}" title="{{ item.name }}" ng-mouseenter="thumbHover = false" ng-mouseleave="thumbHover = true">
             <img ng-src="images/portfolio/grid/{{ item.id }}.jpg" alt="">
             <span class="my-elm bravo" ng-hide="thumbHover">{{ item.name }}</span>
@@ -72,11 +73,9 @@
     <hr>
     </div>
     <div class="row">
-      <a href="">web</a>
-      <a href="">photo</a>
-      <a href="">video</a>
+      <a href="">portfolio</a>
       <a href="">about</a>
-      <a href="">blog</a>
+      <a href="">instagram</a>
       <a href="">contact</a>
     </div>
   </div>

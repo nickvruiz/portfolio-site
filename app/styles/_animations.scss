@@ -1,4 +1,4 @@
-/* ngHide - Fade */
+/* ngHide - Fade in/out blurry bg image */
 .fade{
   @include single-transition(opacity 500ms linear);
   // @include transition-delay(500ms);
@@ -26,7 +26,7 @@
 
 
 
-/* ngHide - Thumb name */
+/* ngHide - Portfolio thumbnail hover */
 .my-elm {
   @include transition(all 300ms ease-in-out);
   @include transform(translateY(-130px));
@@ -36,8 +36,6 @@
 .my-elm.ng-hide {
   @include transform(translateY(0));
   @include opacity(0);
-  // bottom: 50%;
-  // margin-top: -25px;
 }
 
 .my-elm.ng-hide-add, .my-elm.ng-hide-remove {
@@ -50,9 +48,8 @@
 
 
 
-
-/* ngView - Slide */
-.slideup{
+/* ngView - Fade in/out pages */
+.fadeInOut{
     position: absolute;
     top: 0;
     left: 0;
@@ -61,28 +58,24 @@
     @include opacity(1);
 }
 
-.slideup.ng-enter,
-.slideup.ng-leave{
+.fadeInOut.ng-enter,
+.fadeInOut.ng-leave{
     @include transition(all 500ms ease-in-out);
 }
 
-.slideup.ng-enter{
-    // top: 100%;
+.fadeInOut.ng-enter{
     @include transition-delay(500ms);
     @include opacity(0);
 }
 
-.slideup.ng-enter-active{
-    // top: 0;
+.fadeInOut.ng-enter-active{
     @include opacity(1);
 }
 
-.slideup.ng-leave{
-    // top: 0;
+.fadeInOut.ng-leave{
     @include opacity(1);
 }
 
-.slideup.ng-leave-active{
-    // top: -100%;
+.fadeInOut.ng-leave-active{
     @include opacity(0);
 }
