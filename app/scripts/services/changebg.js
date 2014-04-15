@@ -5,7 +5,7 @@ angular.module('webApp')
 
     var toggleBg = false;
 
-    // App API
+    // Bg API
     return {
       showBlurBg: function () {
         toggleBg = true;

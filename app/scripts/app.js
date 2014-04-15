@@ -5,7 +5,7 @@ angular.module('webApp', [
   'ngResource',
   'ngSanitize',
   'ngAnimate',
-  // 'wu.masonry',
+  'ui.bootstrap',
   'ngRoute'
 ])
   .config(function ($routeProvider, $locationProvider) {
@@ -13,6 +13,8 @@ angular.module('webApp', [
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
+        // templateUrl: 'views/about.html',
+        // controller: 'AboutCtrl'
       })
 
       .when('/portfolio', {
@@ -30,14 +32,14 @@ angular.module('webApp', [
         controller: 'AboutCtrl'
       })
 
-      .when('/blog', {
-        templateUrl: 'views/blog.html',
-        controller: 'BlogCtrl'
-      })
-
       .when('/contact', {
         templateUrl: 'views/contact.html',
         controller: 'ContactCtrl'
+      })
+
+      .when('/instagram', {
+        templateUrl: 'views/instagram.html',
+        controller: 'InstagramCtrl'
       })
 
       .otherwise({
@@ -50,6 +52,6 @@ angular.module('webApp', [
   .run(function ($rootScope, $location) {
     $rootScope.$on("$locationChangeStart", function (event, next, current) {
       $rootScope.path = $location.path();
-      console.log($rootScope.path);
+      // console.log($rootScope.path);
     });
   });

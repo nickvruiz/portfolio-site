@@ -12,35 +12,34 @@
     <base href="/">
 
     <!-- build:css styles/vendor.css -->
-        <!-- bower:css -->
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-        <!-- endbower -->
+      <!-- bower:css -->
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+      <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:css({.tmp,app}) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
+      <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
   <body class="full-bg clearfix" ng-app="webApp">
         <div class="full-bg" ng-controller="BgCtrl">
-            <div id="body-wrapper" class="fade" ng-show="toggleBg"></div>
+          <div id="body-wrapper" class="fade" ng-show="toggleBg"></div>
         </div>
 
         <header class="clearfix">
             <div class="col-md-7" ng-controller="NavCtrl">
-                <a class="logo" ng-href="#/" ng-click="hideBg()"></a>
+              <a class="logo" ng-href="#/" ng-click="hideBg()"></a>
             </div>
             <div class="social col-md-5 pull-right">
-                <i class="fa fa-instagram"></i>&nbsp;&nbsp;<i class="fa fa-github"></i>
-                <!-- <button type="button" class="btn btn-default">Resume</button> -->
+              <i class="fa fa-instagram"></i>&nbsp;&nbsp;<i class="fa fa-github"></i>
             </div>
         </header>
 
         <!-- Start Content -->
         <div id="main" class="container-fluid" scroll-position>
 
-            <!-- <div id="page" ng-class="{slideup: path !== '/' }" ng-view></div> -->
-            <div id="page" class="fadeInOut" ng-view></div>
+          <!-- <div id="page" ng-class="{slideup: path !== '/' }" ng-view></div> -->
+          <div id="page" class="fadeInOut" ng-view></div>
 
         </div>
 
@@ -70,6 +69,7 @@
         <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
         <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -79,14 +79,15 @@
         <script src="scripts/controllers/portfolio.js"></script>
         <script src="scripts/controllers/single.js"></script>
         <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/controllers/blog.js"></script>
         <script src="scripts/controllers/contact.js"></script>
+        <script src="scripts/controllers/instagram.js"></script>
 
         <script src="scripts/controllers/bg.js"></script>
         <script src="scripts/controllers/nav.js"></script>
-        <script src="scripts/services/changebg.js"></script>
 
+        <script src="scripts/services/changebg.js"></script>
         <script src="scripts/services/portfoliorepo.js"></script>
+        <script src="scripts/services/instafeed.js"></script>
         <!-- endbuild -->
 </body>
 </html>

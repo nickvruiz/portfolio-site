@@ -1,23 +1,41 @@
-<div class="top container center-block">
-    <h1 class="alpha">THIS IS THE ABOUT PAGE</h1>
-    <small class="bravo">And some text about it...</small>
-    <blockquote>"Going to put an inspirational quote in here" - nick</blockquote>
-</div>
+<!-- Breadcrumbs -->
 <div class="breadcrumb-block">
-    <ol class="breadcrumb container" ng-controller="NavCtrl">
-      <li><a ng-href="#/" ng-click="hideBg()"><span class="glyphicon glyphicon-th"></span></a></li>
-      <li><a ng-href="#portfolio/web">Web</a></li>
-      <li><a ng-href="#portfolio/photo">Photo</a></li>
-      <li><a ng-href="#portfolio/video">Video</a></li>
-      <li class="active"><a ng-href="#about">About</a></li>
-      <li><a ng-href="#blog">Blog</a></li>
-      <li><a ng-href="#contact">Contact</a></li>
+  <div class="container">
+    <ol class="breadcrumb col-md-4" ng-controller="NavCtrl">
+        <li><a ng-href="#/" title="Show Menu" ng-click="hideBg()"><span class="glyphicon glyphicon-th"></span></a></li>
+        <li class="active">ABOUT</li>
     </ol>
+  </div>
 </div>
-<div class="content container">
-    <div class="masonry-box" masonry masonry-options="{ columnWidth: 1 }">
-        <div class="masonry-brick" ng-repeat="brick in bricks">
-            <img ng-src="images/grid/{{ brick.src }}.jpg" alt="A masonry brick">
-        </div>
+
+<!-- Portfolio items -->
+<div class="content">
+    <div class="container about">
+      <img src="/images/slide1.jpg" class="img-responsive">
+      <h1>Hi, My name is Nick and I'm a Front-End Developer.</h1>
+      <accordion close-others="oneAtATime" class="row quattro">
+        <accordion-group heading="WORKFLOW">
+            Sumblime Text 2, Linux CLI, Bower, Grunt, Node, GIT, SASS with Compass
+        </accordion-group>
+        <accordion-group heading="FRAMEWORKS & TOOLS">
+            jQuery, AngularJS, SASS with Compass, Foundation, Bootstrap
+        </accordion-group>
+      </accordion>
     </div>
 </div>
+
+<!-- Footer -->
+<footer class="content dark-block">
+  <div class="container">
+    <div class="row">
+      <h3 class="lato">Nick V Ruiz</h3>
+    <hr>
+    </div>
+    <div class="row">
+      <a href="#portfolio">portfolio</a>
+      <a href="#about">about</a>
+      <a href="#instagram">instagram</a>
+      <a href="#contact">contact</a>
+    </div>
+  </div>
+</footer>

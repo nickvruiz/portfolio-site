@@ -3,15 +3,25 @@ $lato:   'Lato', sans-serif;
 $quatto: 'Quattrocento', serif;
 $fa:     'FontAwesome';
 
+.lato   { font-family: $lato; }
+.quattro{ font-family: $quatto; }
+.fa     { font-family: $fa; }
+
+
 /* Font size */
 $alpha: 2.769em;
 $bravo: 1.385em;
+
+.alpha{ font-size: $alpha; }
+.bravo{ font-size: $bravo; }
+
 
 /* Color palette */
 $med-grey:  #AEAEAE;
 $lgt-grey:  #E9E9E9;
 $drk-green: #655B45;
 $gry-block: #2F2F2F;
+
 
 .full-bg{
     @include background-size(cover);
@@ -37,10 +47,6 @@ a{
         cursor: pointer;
     }
 }
-
-.lato   { font-family: $lato; }
-.quattro{ font-family: $quatto; }
-.fa     { font-family: $fa; }
 
 .nopadding{ padding: 0; }
 
@@ -71,10 +77,18 @@ a{
     padding: 0;
 }
 
-.alpha{
-    font-size: $alpha;
-}
-
-.bravo{
-    font-size: $bravo;
+.about{
+    // position: relative;
+    // width: 695px;
+    // padding-left: 40px;
+    color: white;
+    // &:before{
+    //     position: absolute;
+    //     content: '';
+    //     top: 0;
+    //     left: -20px;
+    //     height: 200px;
+    //     width: 1px;
+    //     background: white;
+    // }
 }

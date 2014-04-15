@@ -2,14 +2,25 @@
 
 angular.module('webApp')
   .controller('AboutCtrl', function ($scope) {
-    $scope.bricks = [
-        { src: 0 },
-        { src: 1 },
-        { src: 2 },
-        { src: 3 },
-        { src: 4 },
-        { src: 5 }
+
+    // Accordian
+    $scope.oneAtATime = true;
+
+    $scope.groups = [
+      {
+        title: "Dynamic Group Header - 1",
+        content: "Dynamic Group Body - 1"
+      },
+      {
+        title: "Dynamic Group Header - 2",
+        content: "Dynamic Group Body - 2"
+      }
     ];
 
-    $scope.message = 'This is the about page!!!!';
+    $scope.items = ['Item 1', 'Item 2', 'Item 3'];
+
+    $scope.addItem = function() {
+      var newItemNo = $scope.items.length + 1;
+      $scope.items.push('Item ' + newItemNo);
+    };
   });

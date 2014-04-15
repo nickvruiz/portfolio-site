@@ -9,6 +9,7 @@ angular.module('webApp')
       portfolioItems = data;
     });
 
+    // Portfolio API
     return {
       getItems: function () {
         return portfolioItems;
