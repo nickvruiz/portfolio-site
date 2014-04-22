@@ -3,16 +3,13 @@
 angular.module('webApp')
   .factory('InstaFeed', function ($http) {
 
-    var instaItems;
-
-    $http.get("/scripts/grams.json").success( function (data) {
-      instaItems = data;
-    });
-
     // Insta API
     return {
       getItems: function () {
-        return instaItems;
+        console.log("getting insta shit");
+        $http.get("/scripts/grams.json").success( function (data) {
+          return data;
+        });
       }
     };
   });

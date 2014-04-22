@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('webApp')
-  .controller('NavCtrl', function ($scope, ChangeBg) {
+  .controller('NavCtrl', function ($scope, $rootScope, ChangeBg) {
 
     $scope.showBg = function () {
         ChangeBg.showBlurBg();
@@ -12,5 +12,9 @@ angular.module('webApp')
         ChangeBg.hideBlurBg();
         ChangeBg.hideHeaderBg();
     };
+
+    $scope.loadInsta = function () {
+        $rootScope.getInstaItems = true;
+    }
 
   });

@@ -55,5 +55,6 @@ angular.module('webApp', [
       // console.log($rootScope.path);
     });
 
-     $rootScope.showHeaderBg = false;
+    // Set global variables
+    $rootScope.showHeaderBg = $rootScope.getInstaItems = false;
   });
