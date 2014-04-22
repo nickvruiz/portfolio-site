@@ -1,0 +1,22 @@
+.panel-group{
+    .panel{
+        color: $lgt-grey;
+        background: none;
+        @include border-radius(0);
+    }
+    h4{
+        font-family: $lato;
+        text-transform: uppercase;
+    }
+}
+
+.panel-default{
+    border-color: $gry-block;
+    .panel-heading{
+        padding: 20px;
+        color: $gry-block;
+        background: $drk-green;
+        border-color: $gry-block;
+        @include border-radius(0);
+    }
+}

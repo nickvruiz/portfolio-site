@@ -26,19 +26,24 @@
           <div id="body-wrapper" class="fade" ng-show="toggleBg"></div>
         </div>
 
-        <header class="clearfix">
-            <div class="col-md-7" ng-controller="NavCtrl">
-              <a class="logo" ng-href="#/" ng-click="hideBg()"></a>
+        <header class="clearfix" ng-class="{ 'has-bg': showHeaderBg }" ng-controller="NavCtrl">
+            <div class="col-md-3">
+              <a class="logo" ng-href="#/" ng-click="hideBg()"><img class="img-responsive" src="/images/nick-ruiz-logo.png" alt="Nick Ruiz Portfolio"></a>
             </div>
-            <div class="social col-md-5 pull-right">
-              <i class="fa fa-instagram"></i>&nbsp;&nbsp;<i class="fa fa-github"></i>
+            <div class="social col-md-9 pull-right">
+              <ol ng-show="showHeaderBg" class="breadcrumb fade charlie" ng-controller="NavCtrl">
+                <li><a ng-href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="/pdf/link-to-resume">RESUME</a></li>
+                <li><a ng-href="#about">ABOUT</a></li>
+                <li><a ng-href="#instagram">@INSTA</a></li>
+                <li><a ng-href="#contact">CONTACT</a></li>
+              </ol>
             </div>
         </header>
 
         <!-- Start Content -->
         <div id="main" class="container-fluid" scroll-position>
 
-          <!-- <div id="page" ng-class="{slideup: path !== '/' }" ng-view></div> -->
           <div id="page" class="fadeInOut" ng-view></div>
 
         </div>

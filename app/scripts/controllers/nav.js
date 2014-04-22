@@ -5,10 +5,12 @@ angular.module('webApp')
 
     $scope.showBg = function () {
         ChangeBg.showBlurBg();
-        // console.log("poop");
+        ChangeBg.showHeaderBg();
     };
 
     $scope.hideBg = function () {
         ChangeBg.hideBlurBg();
+        ChangeBg.hideHeaderBg();
     };
+
   });

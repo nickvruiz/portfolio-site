@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('webApp')
-  .factory('ChangeBg', function () {
+  .factory('ChangeBg', function ($rootScope) {
 
     var toggleBg = false;
 
@@ -15,6 +15,12 @@ angular.module('webApp')
       },
       toggleBg: function () {
         return toggleBg;
+      },
+      showHeaderBg: function () {
+        $rootScope.showHeaderBg = true;
+      },
+      hideHeaderBg: function () {
+        $rootScope.showHeaderBg = false;
       }
     };
   });

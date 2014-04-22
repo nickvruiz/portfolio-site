@@ -1,0 +1,47 @@
+<!-- Visit website link -->
+<div class="content dark-block">
+    <div class="container">
+        <div class="row text-center">
+            <a ng-href="{{ url }}" class="btn" title="name" target="_blank">Visit Website</a>
+        </div>
+    </div>
+</div>
+
+<!-- More work section -->
+<div class="content grey-block caret-dn">
+  <div class="container">
+    <div class="row text-center">
+      <h2 class="quattro">VIEW MORE WORK</h1>
+    </div>
+  </div>
+</div>
+
+<!-- Portfolio items -->
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 nopadding" ng-repeat="item in items">
+                <a class="thumbnail" href="{{ item.id }}" title="{{ item.link }}" ng-mouseenter="thumbHover = false" ng-mouseleave="thumbHover = true">
+                    <img ng-src="{{ item.images.low_resolution.url }}" alt="">
+                    <span class="my-elm bravo" ng-hide="thumbHover">{{ item.filter }}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="content dark-block">
+  <div class="container">
+    <div class="row">
+      <h3 class="lato">Nick V Ruiz</h3>
+    <hr>
+    </div>
+    <div class="row">
+      <a href="#portfolio">portfolio</a>
+      <a href="#about">about</a>
+      <a href="#instagram">instagram</a>
+      <a href="#contact">contact</a>
+    </div>
+  </div>
+</footer>

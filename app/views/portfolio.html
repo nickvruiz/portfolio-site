@@ -1,37 +1,33 @@
 <!-- Page meta -->
-<div class="top container center-block">
+<div class="content green-block">
+  <div class="top container center-block">
     <h1 class="alpha">PORTFOLIO</h1>
     <small class="bravo">A collection of client and personal work.</small>
+  </div>
 </div>
 
 <!-- Breadcrumbs -->
-<div class="breadcrumb-block">
+<div class="breadcrumb-block dark-block">
   <div class="container">
-    <ol class="breadcrumb col-md-4" ng-controller="NavCtrl">
-        <li><a ng-href="#/" title="Show Menu" ng-click="hideBg()"><span class="glyphicon glyphicon-th"></span></a></li>
-        <li class="active">PORTFOLIO</li>
-    </ol>
-    <ol class="breadcrumb col-md-8 text-right">
-        <li>Filter:</li>
-        <li><a ng-click="category = null">all</a></li>
-        <li><a ng-click="category = 'web'">web</a></li>
-        <li><a ng-click="category = 'photo'">photo</a></li>
+    <ol class="breadcrumb bravo">
+      <li>Filter:</li>
+      <li><a ng-click="category = null">all</a></li>
+      <li><a ng-click="category = 'web'">web</a></li>
+      <li><a ng-click="category = 'photo'">photo</a></li>
     </ol>
   </div>
 </div>
 
 <!-- Portfolio items -->
 <div class="content">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 nopadding" ng-repeat="item in items | filter: category">
-                <a class="thumbnail" href="#portfolio/{{ item.category }}/{{ item.id }}" title="{{ item.name }}" ng-mouseenter="thumbHover = false" ng-mouseleave="thumbHover = true">
-                    <img ng-src="images/portfolio/grid/{{ item.id }}.jpg" alt="">
-                    <span class="my-elm bravo" ng-hide="thumbHover">{{ item.name }}</span>
-                </a>
-            </div>
-        </div>
+  <div class="container">
+    <div class="col-md-4 nopadding" ng-repeat="item in items | filter: category">
+        <a class="thumbnail" href="#portfolio/{{ item.category }}/{{ item.id }}" title="{{ item.name }}" ng-mouseenter="thumbHover = false" ng-mouseleave="thumbHover = true">
+            <img ng-src="images/portfolio/grid/{{ item.id }}.jpg" alt="">
+            <span class="my-elm bravo" ng-hide="thumbHover">{{ item.name }}</span>
+        </a>
     </div>
+  </div>
 </div>
 
 <!-- Footer -->

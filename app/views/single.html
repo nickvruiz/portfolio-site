@@ -1,21 +1,20 @@
 <!-- Page meta -->
-<div class="top container center-block">
+<div class="content green-block">
+  <div class="top container center-block">
     <h1 class="alpha">{{ slug }}</h1>
     <small class="bravo">{{ desc }}</small>
-    <div class="testimonial clearfix">
-        <img src="/images/testimonial-jac.jpg" alt="" class="img-circle">
-        <blockquote>"Going to put an inspirational quote in here" - nick</blockquote>
-    </div>
+  </div>
 </div>
 
 <!-- Breadcrumbs -->
-<div class="breadcrumb-block">
-    <ol class="breadcrumb container" ng-controller="NavCtrl">
+<div class="breadcrumb-block dark-block">
+  <div class="container">
+    <ol class="breadcrumb bravo" ng-controller="NavCtrl">
       <li><a ng-href="#/" ng-click="hideBg()"><span class="glyphicon glyphicon-th"></span></a></li>
-      <!-- <li><a ng-href="#portfolio/{{ category }}">{{ category }}</a></li> -->
       <li><a ng-href="#portfolio">PORTFOLIO</a></li>
       <li class="active">{{ slug }}</li>
     </ol>
+  </div>
 </div>
 
 <!-- Portfolio item images -->
@@ -28,7 +27,9 @@
               <fa class="fa fa-circle"></fa>
               <fa class="fa fa-circle"></fa>
             </div>
-            <div class="col-md-6 col-sm-6 col-xs-6 text-right"><fa class="fa fa-rotate-right fa-lg"></fa></div>
+            <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+              <fa class="fa fa-rotate-right fa-lg"></fa>
+            </div>
           </div>
           <img ng-src="/images/portfolio/{{ id }}/{{ img }}.jpg" alt="" class="img-responsive" />
         </li>

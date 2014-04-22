@@ -54,4 +54,6 @@ angular.module('webApp', [
       $rootScope.path = $location.path();
       // console.log($rootScope.path);
     });
+
+     $rootScope.showHeaderBg = false;
   });
