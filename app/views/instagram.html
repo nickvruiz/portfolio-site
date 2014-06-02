@@ -10,10 +10,10 @@
 <div class="content">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 nopadding" ng-repeat="item in items">
-                <a class="thumbnail" href="{{ item.id }}" title="{{ item.link }}" ng-mouseenter="thumbHover = false" ng-mouseleave="thumbHover = true">
-                    <img ng-src="{{ item.images.low_resolution.url }}" alt="">
-                    <span class="my-elm bravo" ng-hide="thumbHover">{{ item.filter }}</span>
+            <div class="col-md-4 nopadding" ng-repeat="gram in grams">
+                <a class="thumbnail" href="{{ gram.id }}" title="{{ gram.link }}" ng-mouseenter="thumbHover = false" ng-mouseleave="thumbHover = true">
+                    <img ng-src="{{ gram.images.low_resolution.url }}" alt="">
+                    <span class="my-elm bravo" ng-hide="thumbHover">{{ gram.filter }}</span>
                 </a>
             </div>
         </div>

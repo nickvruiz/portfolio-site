@@ -3,16 +3,23 @@ $lato:   'Lato', sans-serif;
 $quatto: 'Quattrocento', serif;
 $fa:     'FontAwesome';
 
-.lato   { font-family: $lato; }
+.lato   { font-family: $lato;   }
 .quattro{ font-family: $quatto; }
-.fa     { font-family: $fa; }
+.fa     { font-family: $fa;     }
+
+.slim{
+    font-weight: 100;
+    letter-spacing: .5px;
+}
 
 
 /* Font size */
+$mega:  4.5em;
 $alpha: 2.769em;
 $bravo: 1.385em;
-$charlie: .85em;
+$charlie: 1.2em;
 
+.mega   { font-size: $mega;    }
 .alpha  { font-size: $alpha;   }
 .bravo  { font-size: $bravo;   }
 .charlie{ font-size: $charlie; }
@@ -26,6 +33,11 @@ $gry-block: #2F2F2F;
 
 
 .full-bg{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
     @include background-size(cover);
 }
 
@@ -37,8 +49,22 @@ html{
     font-size: 14px;
     line-height: 18px;
     font-family: $lato;
-    background: url('/images/foggy-road-bg.jpg') fixed no-repeat center;
 }
+
+/* Backgrounds */
+.bg-primary{
+    background: url('/images/bg-primary.jpg') fixed no-repeat center;
+    z-index: 1;
+}
+.bg-contact{
+    background: url('/images/bg-contact.jpg') fixed no-repeat center;
+    z-index: 2;
+}
+.bg-about  { background: url('/images/bg-primary.jpg') fixed no-repeat center; }
+
+/* Blurry backgrounds */
+.bg-primary-blur{ background: url('/images/bg-primary-blur.jpg') fixed no-repeat center; }
+
 
 a{
     color: white;
@@ -52,15 +78,15 @@ a{
 
 .nopadding{ padding: 0; }
 
-#body-wrapper{
-    top: 0;
-    left: 0;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: url('/images/blurry-foggy-road-bg.jpg') fixed no-repeat center;
-}
+// #body-wrapper{
+//     top: 0;
+//     left: 0;
+//     position: fixed;
+//     width: 100%;
+//     height: 100%;
+    // z-index: 1;
+    // background: url('/images/blurry-foggy-road-bg.jpg') fixed no-repeat center;
+// }
 
 #main{
     position: relative;
@@ -93,4 +119,30 @@ a{
     //     width: 1px;
     //     background: white;
     // }
+}
+
+.contact{
+    width: 300px;
+    height: 300px;
+    margin: 200px auto;
+    text-align: center;
+}
+
+#loading{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0,0,0,.5);
+    i{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+        margin-left: -50px;
+        color: $lgt-grey;
+    }
 }

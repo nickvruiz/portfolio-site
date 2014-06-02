@@ -13,8 +13,6 @@ angular.module('webApp', [
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
-        // templateUrl: 'views/about.html',
-        // controller: 'AboutCtrl'
       })
 
       .when('/portfolio', {
@@ -32,14 +30,19 @@ angular.module('webApp', [
         controller: 'AboutCtrl'
       })
 
-      .when('/contact', {
-        templateUrl: 'views/contact.html',
-        controller: 'ContactCtrl'
-      })
+      // .when('/contact', {
+      //   templateUrl: 'views/contact.html',
+      //   controller: 'ContactCtrl'
+      // })
 
       .when('/instagram', {
         templateUrl: 'views/instagram.html',
-        controller: 'InstagramCtrl'
+        controller: 'InstagramCtrl',
+        resolve: {
+          grams: function(InstaFeed){
+            return InstaFeed.getInstas();
+          }
+        }
       })
 
       .otherwise({
@@ -49,12 +52,13 @@ angular.module('webApp', [
     // Remove # from urls
     $locationProvider.html5Mode(true);
   })
-  .run(function ($rootScope, $location) {
-    $rootScope.$on("$locationChangeStart", function (event, next, current) {
-      $rootScope.path = $location.path();
-      // console.log($rootScope.path);
+  .run(function ($rootScope, $location, $anchorScroll, $routeParams) {
+    $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+      $location.hash($routeParams.scrollTo);
+      $anchorScroll();
     });
 
     // Set global variables
-    $rootScope.showHeaderBg = $rootScope.getInstaItems = false;
+    $rootScope.showHeaderBg = $rootScope.hideMainNav = false;
+    $rootScope.bgType = 'bg-contact';
   });

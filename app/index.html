@@ -22,23 +22,29 @@
     <!-- endbuild -->
   </head>
   <body class="full-bg clearfix" ng-app="webApp">
-        <div class="full-bg" ng-controller="BgCtrl">
-          <div id="body-wrapper" class="fade" ng-show="toggleBg"></div>
+        <div ng-controller="BgCtrl">
+          <!-- Contact page bg -->
+          <div class="fade full-bg bg-contact" ng-show="hideMainNav"></div>
+
+          <div class="fade full-bg bg-primary" ng-hide="toggleBg"></div>
+          <div class="fade full-bg bg-primary-blur"></div>
         </div>
 
         <header class="clearfix" ng-class="{ 'has-bg': showHeaderBg }" ng-controller="NavCtrl">
-            <div class="col-md-3">
-              <a class="logo" ng-href="#/" ng-click="hideBg()"><img class="img-responsive" src="/images/nick-ruiz-logo.png" alt="Nick Ruiz Portfolio"></a>
-            </div>
-            <div class="col-md-9 pull-right text-right">
-              <ul ng-show="showHeaderBg" class="list-inline fade" ng-controller="NavCtrl">
-                <li><a ng-href="#/" ng-click="hideBg()">Menu&nbsp;&nbsp;&nbsp;<span class="fa fa-bars fa-lg"></span></a></li>
-                <!-- <li><a ng-href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="/pdf/link-to-resume">RESUME</a></li>
-                <li><a ng-href="#about">ABOUT</a></li>
-                <li><a ng-href="#instagram">@INSTA</a></li>
-                <li><a ng-href="#contact">CONTACT</a></li> -->
-              </ul>
+            <div class="col-md-12">
+              <a class="logo pull-left" ng-href="#/" ng-click="hideBg()"><img class="img-responsive" src="/images/nick-ruiz-logo.png" alt="Nick Ruiz Portfolio"></a>
+              <div class="pull-right text-right">
+                <ul class="menu list-inline" ng-controller="NavCtrl">
+                  <li ng-show="showHeaderBg" class="lato bravo slim slogan">Menu</li>
+                  <li ng-hide="showHeaderBg" class="lato bravo slim slogan">Front End Developer</li>
+                  <!-- <li ng-show="showHeaderBg"><a ng-href="#/" ng-click="hideBg()">Menu&nbsp;&nbsp;&nbsp;<span class="fa fa-bars fa-lg"></span></a></li> -->
+                  <li ng-show="showHeaderBg"><a ng-href="#/" ng-click="hideBg()"><span class="fa fa-bars fa-lg"></span></a></li>
+                  <li ng-hide="showHeaderBg" class="social text-left">
+                    <a href="" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="" target="_blank"><i class="fa fa-instagram"></i></a>
+                  </li>
+                </ul>
+              </div>
             </div>
         </header>
 
@@ -46,6 +52,10 @@
         <div id="main" class="container-fluid" scroll-position>
 
           <div id="page" class="fadeInOut" ng-view></div>
+
+          <!-- <div id="loading" ng-show="loadingView">
+            <i class="fa fa-circle-o-notch fa-spin"></i>
+          </div> -->
 
         </div>
 

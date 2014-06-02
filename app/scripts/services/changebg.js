@@ -21,6 +21,12 @@ angular.module('webApp')
       },
       hideHeaderBg: function () {
         $rootScope.showHeaderBg = false;
-      }
+      },
+      showMainNav: function () {
+        $rootScope.hideMainNav = true;
+      },
+      hideMainNav: function () {
+        $rootScope.hideMainNav = false;
+      },
     };
   });

@@ -1,27 +1,24 @@
 <!-- Page meta -->
-<div class="content green-block">
-  <div class="top container center-block">
-    <h1 class="alpha">PORTFOLIO</h1>
-    <small class="bravo">A collection of client and personal work.</small>
+<div class="content text-center clearfix">
+  <div class="top container">
+    <h1 class="mega quattro">PORTFOLIO</h1>
+    <small class="bravo">A collection of client and personal work</small>
   </div>
-</div>
 
-<!-- Breadcrumbs -->
-<div class="breadcrumb-block dark-block">
+  <!-- Filter -->
   <div class="container">
-    <ol class="breadcrumb bravo">
-      <li>Filter:</li>
-      <li><a ng-click="category = null">all</a></li>
+    <ul class="list-inline filters charlie">
+      <li class="active"><a ng-click="category = null">all</a></li>
       <li><a ng-click="category = 'web'">web</a></li>
       <li><a ng-click="category = 'photo'">photo</a></li>
-    </ol>
+    </ul>
   </div>
 </div>
 
 <!-- Portfolio items -->
-<div class="content">
+<div class="content dark-block">
   <div class="container">
-    <div class="col-md-4 nopadding" ng-repeat="item in items | filter: category">
+    <div class="col-md-4 col-sm-4 col-xs-6 nopadding" ng-repeat="item in items | filter: category">
         <a class="thumbnail" href="#portfolio/{{ item.category }}/{{ item.id }}" title="{{ item.name }}" ng-mouseenter="thumbHover = false" ng-mouseleave="thumbHover = true">
             <img ng-src="images/portfolio/grid/{{ item.id }}.jpg" alt="">
             <span class="my-elm bravo" ng-hide="thumbHover">{{ item.name }}</span>
@@ -31,13 +28,13 @@
 </div>
 
 <!-- Footer -->
-<footer class="content dark-block">
+<footer class="content">
   <div class="container">
-    <div class="row">
+    <div class="col-md-12">
       <h3 class="lato">Nick V Ruiz</h3>
-    <hr>
+      <hr>
     </div>
-    <div class="row">
+    <div class="col-md-12">
       <a href="#portfolio">portfolio</a>
       <a href="#about">about</a>
       <a href="#instagram">instagram</a>

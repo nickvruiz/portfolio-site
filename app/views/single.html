@@ -1,19 +1,25 @@
 <!-- Page meta -->
-<div class="content green-block">
-  <div class="top container center-block">
-    <h1 class="alpha">{{ slug }}</h1>
-    <small class="bravo">{{ desc }}</small>
+<div class="content jumbo dark-block text-center clearfix">
+  <div class="top container">
+    <h1 class="mega quattro">{{ slug }}</h1>
+  </div>
+
+  <!-- Filter -->
+  <div class="container">
+    <ul class="col-md-12 list-inline filters charlie">
+      <li><a ng-href="#portfolio/{{ category }}/{{ prev }}" title="Previous"><i class="fa fa-caret-left"></i>&nbsp;&nbsp;Prev</a></li>
+      <li style="margin: 0 40px;"><a ng-href="#portfolio" title="Back"><i class="fa fa-th"></i></a></li>
+      <li><a ng-href="#portfolio/{{ category }}/{{ next }}" title="Next">Next&nbsp;&nbsp;<i class="fa fa-caret-right"></i></a></li>
+    </ul>
   </div>
 </div>
 
-<!-- Breadcrumbs -->
-<div class="breadcrumb-block dark-block">
+<!-- More work section -->
+<div class="content grey-block caret-dn">
   <div class="container">
-    <ol class="breadcrumb bravo" ng-controller="NavCtrl">
-      <li><a ng-href="#/" ng-click="hideBg()"><span class="glyphicon glyphicon-th"></span></a></li>
-      <li><a ng-href="#portfolio">PORTFOLIO</a></li>
-      <li class="active">{{ slug }}</li>
-    </ol>
+    <div class="row text-center">
+      <p class="description bravo lato">{{ desc }}</p>
+    </div>
   </div>
 </div>
 
@@ -69,11 +75,11 @@
 <!-- Footer -->
 <footer class="content dark-block">
   <div class="container">
-    <div class="row">
+    <div class="col-md-12">
       <h3 class="lato">Nick V Ruiz</h3>
-    <hr>
+      <hr>
     </div>
-    <div class="row">
+    <div class="col-md-12">
       <a href="#portfolio">portfolio</a>
       <a href="#about">about</a>
       <a href="#instagram">instagram</a>
