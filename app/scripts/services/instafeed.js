@@ -12,10 +12,7 @@ angular.module('webApp')
             url = '/scripts/grams.json';
             // url = 'https://api.instagram.com/v1/users/3/media/recent/?client_id=' + client_id + '&count=' + count;
 
-        var promise = $http({ method: 'GET', url: url }).success(function(data, status, headers, config) {
-          return data;
-        });
-        return promise;
+        return $http.get(url);
       }
     };
   });
