@@ -22,26 +22,29 @@
     }
     blockquote{
         position: relative;
-        height: 40px;
         padding: 0 20px;
-        margin-top: 10px;
-        margin-left: 20px;
+        margin-top: 80px;
+        // margin-left: -108px;
         float: left;
-        color: $drk-green;
+        color: white;
         font-family: $quatto;
         font-weight: 300;
-        line-height: 40px;
+        line-height: 30px;
         font-style: italic;
         border-left: 0;
-        background: white;
+        // background: white;
+        // border-bottom: 2px solid $med-grey;
         @include border-radius(3px);
         &::before{
             position: absolute;
-            font-family: FontAwesome;
-            content: "\f0d9";
-            top: 0;
+            // font-family: FontAwesome;
+            // content: "\f0d9";
+            top: 3px;
             left: -5px;
+            width: 1px;
+            height: 50%;
             color: white;
+            background: white;
         }
     }
 }

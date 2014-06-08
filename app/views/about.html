@@ -1,41 +1,52 @@
-<!-- Breadcrumbs -->
-<div class="breadcrumb-block">
-  <div class="container">
-    <ol class="breadcrumb col-md-4" ng-controller="NavCtrl">
-        <li><a ng-href="#/" title="Show Menu" ng-click="hideBg()"><span class="glyphicon glyphicon-th"></span></a></li>
-        <li class="active">ABOUT</li>
-    </ol>
+<!-- Page meta -->
+<div class="content text-center clearfix">
+  <div class="top container">
+    <div class="col-md-6">
+      <img class="img-responsive" src="/images/about.png" width="400px" height="400px" alt="About me">
+    </div>
+    <div class="col-md-6 quote">
+      <blockquote class="bravo text-left lato">" Hi my name is Nick, I'm a Front End Developer, designer and photographer living in San Diego, CA.</blockquote>
+    </div>
+  </div>
+</div>
+
+  <!-- Bio section -->
+  <div class="content grey-block caret-dn">
+    <div class="container">
+      <div class="row text-center">
+        <p class="description bravo lato">Hi my name is Nick, I'm a Front End Developer, designer and photographer living in San Diego, CA. I'm currently searching for <a href="#contact">full time employment</a>. Take a look ar my <a href="#portfolio">portfolio</a> for examples of work, or see below for a list of tools and programs I use to get the job done.</p>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- Portfolio items -->
-<div class="content">
-    <div class="container about">
-      <img src="/images/slide1.jpg" class="img-responsive">
-      <h1>Hi, My name is Nick and I'm a Front-End Developer.</h1>
-      <accordion close-others="oneAtATime" class="row quattro">
-        <accordion-group heading="WORKFLOW">
-            Sumblime Text 2, Linux CLI, Bower, Grunt, Node, GIT, SASS with Compass
-        </accordion-group>
-        <accordion-group heading="FRAMEWORKS & TOOLS">
-            jQuery, AngularJS, SASS with Compass, Foundation, Bootstrap
-        </accordion-group>
-      </accordion>
+<div class="content dark-block">
+  <div class="container">
+    <div class="col-md-4 col-sm-4 col-xs-6 nopadding" ng-repeat="item in items | filter: category">
+        <a class="thumbnail" href="{{ item.link }}" title="{{ item.name }}" target="_blank" ng-mouseenter="thumbHover = false" ng-mouseleave="thumbHover = true">
+            <img ng-src="images/about/{{ item.name }}.jpg" alt="">
+            <span class="my-elm bravo" ng-hide="thumbHover">Learn More</span>
+        </a>
     </div>
+  </div>
 </div>
 
 <!-- Footer -->
-<footer class="content dark-block">
+<footer class="content">
   <div class="container">
-    <div class="row">
+    <div class="col-md-12">
       <h3 class="lato">Nick V Ruiz</h3>
-    <hr>
+      <hr>
     </div>
-    <div class="row">
+    <div class="col-md-10">
       <a href="#portfolio">portfolio</a>
       <a href="#about">about</a>
       <a href="#instagram">instagram</a>
       <a href="#contact">contact</a>
+    </div>
+    <div class="col-md-2 text-right">
+      <a ng-href="#" ng-click="scrollTop()">top</a>
     </div>
   </div>
 </footer>

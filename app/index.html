@@ -21,11 +21,8 @@
       <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body class="full-bg clearfix" ng-app="webApp">
+  <body class="clearfix" ng-app="webApp">
         <div ng-controller="BgCtrl">
-          <!-- Contact page bg -->
-          <div class="fade full-bg bg-contact" ng-show="hideMainNav"></div>
-
           <div class="fade full-bg bg-primary" ng-hide="toggleBg"></div>
           <div class="fade full-bg bg-primary-blur"></div>
         </div>
@@ -37,7 +34,6 @@
                 <ul class="menu list-inline" ng-controller="NavCtrl">
                   <li ng-show="showHeaderBg" class="lato bravo slim slogan">Menu</li>
                   <li ng-hide="showHeaderBg" class="lato bravo slim slogan">Front End Developer</li>
-                  <!-- <li ng-show="showHeaderBg"><a ng-href="#/" ng-click="hideBg()">Menu&nbsp;&nbsp;&nbsp;<span class="fa fa-bars fa-lg"></span></a></li> -->
                   <li ng-show="showHeaderBg"><a ng-href="#/" ng-click="hideBg()"><span class="fa fa-bars fa-lg"></span></a></li>
                   <li ng-hide="showHeaderBg" class="social text-left">
                     <a href="" target="_blank"><i class="fa fa-github"></i></a>
@@ -50,17 +46,15 @@
 
         <!-- Start Content -->
         <div id="main" class="container-fluid" scroll-position>
-
+          <div class="fade loading" ng-show="routeLoading">
+            <h2 class="alpha"><i class="fa fa-circle-o-notch"></i></h2>
+          </div>
+          <!-- View -->
           <div id="page" class="fadeInOut" ng-view></div>
-
-          <!-- <div id="loading" ng-show="loadingView">
-            <i class="fa fa-circle-o-notch fa-spin"></i>
-          </div> -->
-
         </div>
 
         <!-- Google Analytics -->
-         <script>
+        <script>
            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

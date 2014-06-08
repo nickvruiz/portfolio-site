@@ -5,10 +5,12 @@ angular.module('webApp', [
   'ngResource',
   'ngSanitize',
   'ngAnimate',
-  'ui.bootstrap',
   'ngRoute'
 ])
   .config(function ($routeProvider, $locationProvider) {
+
+    $locationProvider.html5Mode(true); // Remove # from urls
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -30,11 +32,6 @@ angular.module('webApp', [
         controller: 'AboutCtrl'
       })
 
-      // .when('/contact', {
-      //   templateUrl: 'views/contact.html',
-      //   controller: 'ContactCtrl'
-      // })
-
       .when('/instagram', {
         templateUrl: 'views/instagram.html',
         controller: 'InstagramCtrl',
@@ -48,17 +45,33 @@ angular.module('webApp', [
       .otherwise({
         redirectTo: '/'
       });
-
-    // Remove # from urls
-    $locationProvider.html5Mode(true);
   })
   .run(function ($rootScope, $location, $anchorScroll, $routeParams) {
-    $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
-      $location.hash($routeParams.scrollTo);
-      $anchorScroll();
-    });
 
     // Set global variables
-    $rootScope.showHeaderBg = $rootScope.hideMainNav = false;
-    $rootScope.bgType = 'bg-contact';
+    $rootScope.showHeaderBg = false,
+    $rootScope.routeLoading = false,
+     $rootScope.hideMainNav = false;
+
+    function scrollTop(){
+      $location.hash($routeParams.scrollTo);
+      $anchorScroll();
+    }
+
+
+    $rootScope.$on('$routeChangeStart',
+      function () {
+      $rootScope.routeLoading = true;
+      scrollTop();
+    });
+
+    $rootScope.$on('$routeChangeSuccess',
+      function () {
+      $rootScope.routeLoading = false;
+    });
+
+    $rootScope.$on('$routeChangeError',
+      function () {
+      $location.path('/');
+    });
   });

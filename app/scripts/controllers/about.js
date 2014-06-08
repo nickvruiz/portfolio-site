@@ -3,24 +3,57 @@
 angular.module('webApp')
   .controller('AboutCtrl', function ($scope) {
 
-    // Accordian
-    $scope.oneAtATime = true;
+    $scope.thumbHover = true;
 
-    $scope.groups = [
+    $scope.items = [
       {
-        title: "Dynamic Group Header - 1",
-        content: "Dynamic Group Body - 1"
+          "name": "angular",
+          "link": "https://angularjs.org/"
       },
       {
-        title: "Dynamic Group Header - 2",
-        content: "Dynamic Group Body - 2"
+          "name": "jquery",
+          "link": "http://jquery.com/"
+      },
+      {
+          "name": "sass",
+          "link": "http://sass-lang.com/"
+      },
+      {
+          "name": "yeoman",
+          "link": "http://yeoman.io/"
+      },
+      {
+          "name": "grunt",
+          "link": "http://gruntjs.com/"
+      },
+      {
+          "name": "bower",
+          "link": "http://bower.io/"
+      },
+      {
+          "name": "foundation",
+          "link": "http://foundation.zurb.com/"
+      },
+      {
+          "name": "bootstrap",
+          "link": "http://getbootstrap.com/"
+      },
+      {
+          "name": "laravel",
+          "link": "http://laravel.com/"
+      },
+      {
+          "name": "php",
+          "link": "http://www.php.net/"
+      },
+      {
+          "name": "wordpress",
+          "link": "http://wordpress.org/"
+      },
+      {
+          "name": "git",
+          "link": "http://git-scm.com/"
       }
     ];
 
-    $scope.items = ['Item 1', 'Item 2', 'Item 3'];
-
-    $scope.addItem = function() {
-      var newItemNo = $scope.items.length + 1;
-      $scope.items.push('Item ' + newItemNo);
-    };
   });
