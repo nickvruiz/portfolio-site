@@ -7,9 +7,9 @@
   <!-- Filter -->
   <div class="container">
     <ul class="col-md-12 list-inline filters charlie">
-      <li><a ng-href="#portfolio/{{ category }}/{{ prev }}" title="Previous"><i class="fa fa-caret-left"></i>&nbsp;&nbsp;Prev</a></li>
-      <li style="margin: 0 40px;"><a ng-href="#portfolio" title="Back"><i class="fa fa-th"></i></a></li>
-      <li><a ng-href="#portfolio/{{ category }}/{{ next }}" title="Next">Next&nbsp;&nbsp;<i class="fa fa-caret-right"></i></a></li>
+      <li><a ng-href="#portfolio/{{ category }}/{{ prev }}" title="Previous"><i class="fa fa-caret-left"></i>Prev</a></li>
+      <li class="mid"><a ng-href="#portfolio" title="Back">ALL</a></li>
+      <li><a ng-href="#portfolio/{{ category }}/{{ next }}" title="Next">Next<i class="fa fa-caret-right"></i></a></li>
     </ul>
   </div>
 </div>
@@ -73,17 +73,22 @@
 </div>
 
 <!-- Footer -->
-<footer class="content dark-block">
+<footer class="content">
   <div class="container">
     <div class="col-md-12">
       <h3 class="lato">Nick V Ruiz</h3>
       <hr>
     </div>
-    <div class="col-md-12">
-      <a href="#portfolio">portfolio</a>
-      <a href="#about">about</a>
-      <a href="#instagram">instagram</a>
-      <a href="#contact">contact</a>
+    <div class="col-md-10">
+      <a ng-href="#portfolio">portfolio</a>
+      <a ng-href="#about">about</a>
+      <a ng-href="#instagram">instagram</a>
+      <a ng-href="#contact">contact</a>
+    </div>
+    <div class="col-md-2 social text-right">
+      <a href="https://www.linkedin.com/in/nickvruiz" target="_blank"><i class="fa fa-linkedin"></i></a>
+      <a href="https://github.com/nickvruiz/" target="_blank"><i class="fa fa-github"></i></a>
+      <a href="http://instagram.com/nickvruiz" target="_blank"><i class="fa fa-instagram"></i></a>
     </div>
   </div>
 </footer>

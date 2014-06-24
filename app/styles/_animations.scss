@@ -1,7 +1,6 @@
 /* ngHide - Fade in/out blurry bg image */
 .fade{
   @include single-transition(opacity 500ms linear);
-  // @include transition-delay(500ms);
   @include opacity(1);
 }
 

@@ -1,10 +1,10 @@
 header{
     position: fixed;
     width: 100%;
-    height: 65px;
+    height: 40px;
     top: 0;
     left: 0;
-    line-height: 65px;
+    line-height: 40px;
     z-index: 999;
     &:before{
         position: absolute;
@@ -13,24 +13,45 @@ header{
         height: 100%;
         top: 0;
         left: 0;
-        @include transition(all 500ms ease-in-out);
-        @include transition-delay(350ms);
+        @include transition(all 300ms ease-in-out);
         @include transform(translateY(-65px));
         @include opacity(0);
         background: $gry-block;
     }
 }
 
-.has-bg{
+.has-bg{ // Active state of header
     &:before{
         @include transform(translateY(0));
         @include opacity(1);
+    }
+
+    .logo{
+        margin-top: 0;
+        margin-left: -15px;
+    }
+
+    .menu{
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+        .slogan{
+            line-height: 26px;
+            border-color: $slogan-border;
+        }
+        a{
+            color: $med-grey;
+            &:hover{
+                color: $lgt-grey;
+            }
+        }
     }
 }
 
 .menu{
     margin-top: 15px;
     line-height: 35px;
+    @include transition(all 300ms linear);
     .slogan{
         margin-right: 15px;
         padding-right: 15px;
@@ -46,8 +67,13 @@ header{
 .logo{
     display: block;
     margin-top: 10px;
-    width: 125px;
-    height: 44px;
+    width: 122px;
+    height: 40px;
+    @include opacity(.85);
+    @include transition(all 300ms linear);
+    &:hover{
+        @include opacity(1);
+    }
 }
 
 .top-nav{

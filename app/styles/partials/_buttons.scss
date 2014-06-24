@@ -4,6 +4,7 @@
     padding: 0 22px;
     line-height: 44px;
     font-weight: 300;
+    font-style: normal;
     letter-spacing: .5px;
     background: none;
     border: 1px solid $med-grey;
@@ -13,4 +14,8 @@
         color: $lgt-grey;
         border: 1px solid $lgt-grey;
     }
+}
+
+.btn-square{
+    @include border-radius(0);
 }

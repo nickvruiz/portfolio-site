@@ -18,28 +18,22 @@ $mega:  4.5em;
 $alpha: 2.769em;
 $bravo: 1.385em;
 $charlie: 1.2em;
+$delta: .85em;
 
 .mega   { font-size: $mega;    }
 .alpha  { font-size: $alpha;   }
 .bravo  { font-size: $bravo;   }
 .charlie{ font-size: $charlie; }
+.delta  { font-size: $delta;   }
 
 
 /* Color palette */
-$med-grey:  #AEAEAE;
-$lgt-grey:  #E9E9E9;
-$drk-green: #655B45;
-$gry-block: #2F2F2F;
+$med-grey:         #AEAEAE;
+$lgt-grey:         #E9E9E9;
+$drk-green:        #655B45;
+$gry-block:        #2F2F2F;
+$slogan-border:    #5A5A5A;
 
-
-.full-bg{
-    top: 0;
-    left: 0;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    @include background-size(cover);
-}
 
 body,
 html{
@@ -51,18 +45,22 @@ html{
     font-family: $lato;
 }
 
+
 /* Backgrounds */
+.full-bg{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    @include background-size(cover);
+}
+
 .bg-primary{
     background: url('/images/bg-primary.jpg') fixed no-repeat center;
     z-index: 1;
 }
-.bg-contact{
-    background: url('/images/bg-contact.jpg') fixed no-repeat center;
-    z-index: 2;
-}
-.bg-about  { background: url('/images/bg-primary.jpg') fixed no-repeat center; }
 
-/* Blurry backgrounds */
 .bg-primary-blur{ background: url('/images/bg-primary-blur.jpg') fixed no-repeat center; }
 
 
@@ -77,16 +75,6 @@ a{
 }
 
 .nopadding{ padding: 0; }
-
-// #body-wrapper{
-//     top: 0;
-//     left: 0;
-//     position: fixed;
-//     width: 100%;
-//     height: 100%;
-    // z-index: 1;
-    // background: url('/images/blurry-foggy-road-bg.jpg') fixed no-repeat center;
-// }
 
 #main{
     position: relative;
@@ -103,29 +91,6 @@ a{
 .container{
     width: 735px;
     padding: 0;
-}
-
-.about{
-    // position: relative;
-    // width: 695px;
-    // padding-left: 40px;
-    color: white;
-    // &:before{
-    //     position: absolute;
-    //     content: '';
-    //     top: 0;
-    //     left: -20px;
-    //     height: 200px;
-    //     width: 1px;
-    //     background: white;
-    // }
-}
-
-.contact{
-    width: 300px;
-    height: 300px;
-    margin: 200px auto;
-    text-align: center;
 }
 
 .loading{

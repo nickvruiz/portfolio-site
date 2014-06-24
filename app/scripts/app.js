@@ -32,10 +32,15 @@ angular.module('webApp', [
         controller: 'AboutCtrl'
       })
 
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactCtrl'
+      })
+
       .when('/instagram', {
         templateUrl: 'views/instagram.html',
         controller: 'InstagramCtrl',
-        resolve: {
+        resolve: { // Grab insta then load page
           grams: function(InstaFeed){
             return InstaFeed.getInstas();
           }
@@ -46,27 +51,27 @@ angular.module('webApp', [
         redirectTo: '/'
       });
   })
-  .run(function ($rootScope, $location, $anchorScroll, $routeParams) {
+  .run(function ($rootScope, $window, $location, $routeParams) {
 
     // Set global variables
     $rootScope.showHeaderBg = false,
     $rootScope.routeLoading = false,
      $rootScope.hideMainNav = false;
 
-    function scrollTop(){
-      $location.hash($routeParams.scrollTo);
-      $anchorScroll();
+    $rootScope.scrollTop = function( e ){
+      $window.scrollTo(0,0);
+      e.preventDefault();
     }
-
 
     $rootScope.$on('$routeChangeStart',
       function () {
       $rootScope.routeLoading = true;
-      scrollTop();
+      $rootScope.scrollTop();
     });
 
     $rootScope.$on('$routeChangeSuccess',
       function () {
+      $window.scrollTo(0,0);
       $rootScope.routeLoading = false;
     });
 

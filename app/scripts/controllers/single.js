@@ -5,7 +5,7 @@ angular.module('webApp')
 
     // Our current portfolio piece id
     var id = $routeParams.id;
-    var calculatedId;
+    // var calculatedId;
 
     // Hide hover effect on portfolio items
     $scope.thumbHover = true;

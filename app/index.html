@@ -22,36 +22,43 @@
     <!-- endbuild -->
   </head>
   <body class="clearfix" ng-app="webApp">
+
+        <!-- Background control -->
         <div ng-controller="BgCtrl">
           <div class="fade full-bg bg-primary" ng-hide="toggleBg"></div>
           <div class="fade full-bg bg-primary-blur"></div>
         </div>
 
         <header class="clearfix" ng-class="{ 'has-bg': showHeaderBg }" ng-controller="NavCtrl">
-            <div class="col-md-12">
-              <a class="logo pull-left" ng-href="#/" ng-click="hideBg()"><img class="img-responsive" src="/images/nick-ruiz-logo.png" alt="Nick Ruiz Portfolio"></a>
-              <div class="pull-right text-right">
-                <ul class="menu list-inline" ng-controller="NavCtrl">
-                  <li ng-show="showHeaderBg" class="lato bravo slim slogan">Menu</li>
-                  <li ng-hide="showHeaderBg" class="lato bravo slim slogan">Front End Developer</li>
-                  <li ng-show="showHeaderBg"><a ng-href="#/" ng-click="hideBg()"><span class="fa fa-bars fa-lg"></span></a></li>
-                  <li ng-hide="showHeaderBg" class="social text-left">
-                    <a href="" target="_blank"><i class="fa fa-github"></i></a>
-                    <a href="" target="_blank"><i class="fa fa-instagram"></i></a>
-                  </li>
-                </ul>
-              </div>
+          <div class="col-md-12">
+            <a class="logo pull-left" ng-href="#/" ng-click="hideBg()"><img class="img-responsive" src="/images/nick-ruiz-logo.png" alt="Nick Ruiz Portfolio"></a>
+            <div class="pull-right text-right">
+              <ul class="menu list-inline lato" ng-controller="NavCtrl">
+
+                <li ng-show="showHeaderBg" class="slogan"><a class="charlie slim" ng-href="#/" ng-click="hideBg()"><span class="fa fa-bars"></span></a></li>
+                <li ng-show="showHeaderBg"><a class="charlie" href="" ng-click="scrollTop()">TOP</a></li>
+
+                <li ng-hide="showHeaderBg" class="bravo slim slogan">Front End Developer</li>
+                <li ng-hide="showHeaderBg" class="bravo slim"><i class="fa fa-rocket"></i></li>
+              </ul>
             </div>
+          </div>
         </header>
+
 
         <!-- Start Content -->
         <div id="main" class="container-fluid" scroll-position>
+
+          <!-- Loading overlay -->
           <div class="fade loading" ng-show="routeLoading">
-            <h2 class="alpha"><i class="fa fa-circle-o-notch"></i></h2>
+            <h2 class="alpha quattro"><i class="fa fa-circle-o-notch"></i></h2>
           </div>
+
+
           <!-- View -->
           <div id="page" class="fadeInOut" ng-view></div>
-        </div>
+
+        </div> <!-- #main -->
 
         <!-- Google Analytics -->
         <script>

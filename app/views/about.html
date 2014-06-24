@@ -1,21 +1,27 @@
 <!-- Page meta -->
-<div class="content text-center clearfix">
+<div class="content jumbo text-center clearfix">
   <div class="top container">
     <div class="col-md-6">
       <img class="img-responsive" src="/images/about.png" width="400px" height="400px" alt="About me">
     </div>
-    <div class="col-md-6 quote">
-      <blockquote class="bravo text-left lato">" Hi my name is Nick, I'm a Front End Developer, designer and photographer living in San Diego, CA.</blockquote>
+    <div class="col-md-6">
+      <blockquote class="bravo text-left">
+        " Hi my name is Nick, I'm a Front End Developer, designer and photographer living in San Diego, CA.
+        <div class="sub-quote delta lato">
+          Looking for a full-time Front End Dev to add to your team?<br>
+          <a class="btn btn-square" ng-href="#contact">Get In Touch</a>
+        </div>
+      </blockquote>
     </div>
   </div>
 </div>
 
-  <!-- Bio section -->
-  <div class="content grey-block caret-dn">
-    <div class="container">
-      <div class="row text-center">
-        <p class="description bravo lato">Hi my name is Nick, I'm a Front End Developer, designer and photographer living in San Diego, CA. I'm currently searching for <a href="#contact">full time employment</a>. Take a look ar my <a href="#portfolio">portfolio</a> for examples of work, or see below for a list of tools and programs I use to get the job done.</p>
-      </div>
+<!-- Bio section -->
+<div class="content grey-block caret-dn">
+  <div class="container">
+    <div class="row text-center">
+      <!-- <p class="description bravo lato">Code for the browser, responsive is responsible, modular css</p> -->
+      <p class="description bravo lato">Hi my name is Nick, I'm a Front End Developer, designer and photographer living in San Diego, CA.I'm currently searching for <a class="fade" ng-href="#contact">full time employment</a>. Take a look at my <a class="fade" ng-href="#portfolio">portfolio</a> for examples of work, or see below for a list of tools and programs I use to get the job done.</p>
     </div>
   </div>
 </div>
@@ -40,13 +46,15 @@
       <hr>
     </div>
     <div class="col-md-10">
-      <a href="#portfolio">portfolio</a>
-      <a href="#about">about</a>
-      <a href="#instagram">instagram</a>
-      <a href="#contact">contact</a>
+      <a ng-href="#portfolio">portfolio</a>
+      <a ng-href="#about">about</a>
+      <a ng-href="#instagram">instagram</a>
+      <a ng-href="#contact">contact</a>
     </div>
-    <div class="col-md-2 text-right">
-      <a ng-href="#" ng-click="scrollTop()">top</a>
+    <div class="col-md-2 social text-right">
+      <a href="https://www.linkedin.com/in/nickvruiz" target="_blank"><i class="fa fa-linkedin"></i></a>
+      <a href="https://github.com/nickvruiz/" target="_blank"><i class="fa fa-github"></i></a>
+      <a href="http://instagram.com/nickvruiz" target="_blank"><i class="fa fa-instagram"></i></a>
     </div>
   </div>
 </footer>

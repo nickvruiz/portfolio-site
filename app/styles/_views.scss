@@ -1,51 +1,55 @@
+$experimental-support-for-opera: true; // Optional, since it's off by default
+
+.contact{
+    @include experimental-value(height, calc(100% - 186px));
+    padding-top: 100px;
+}
+
 .top{
     margin-top: 35px;
     padding: 50px 0;
     color: $lgt-grey;
-    // border-left: 1px solid $gry-block;
     h1{
         margin: 0;
-        // margin-bottom: 10px;
-        // font-family: $quatto;
         text-transform: uppercase;
     }
     small{
         display: block;
-        // padding: 10px 0;
-        // color: $lgt-grey;
         font-weight: 100;
         line-height: 25px;
         letter-spacing: .8px;
-        // font-style: italic;
-        // border-top: 1px dotted $med-grey;
-        // border-bottom: 1px dotted $med-grey;
     }
-    blockquote{
-        position: relative;
-        padding: 0 20px;
-        margin-top: 80px;
-        // margin-left: -108px;
-        float: left;
+}
+
+blockquote{
+    position: relative;
+    padding: 0 20px;
+    margin-top: 80px;
+    float: left;
+    color: white;
+    font-family: $quatto;
+    font-weight: 300;
+    line-height: 30px;
+    font-style: italic;
+    border-left: 0;
+    @include border-radius(3px);
+    &::before{
+        position: absolute;
+        top: 3px;
+        left: -5px;
+        width: 1px;
+        height: 50%;
         color: white;
-        font-family: $quatto;
-        font-weight: 300;
-        line-height: 30px;
-        font-style: italic;
-        border-left: 0;
-        // background: white;
-        // border-bottom: 2px solid $med-grey;
-        @include border-radius(3px);
-        &::before{
-            position: absolute;
-            // font-family: FontAwesome;
-            // content: "\f0d9";
-            top: 3px;
-            left: -5px;
-            width: 1px;
-            height: 50%;
-            color: white;
-            background: white;
-        }
+        background: white;
+    }
+}
+
+.sub-quote{
+    margin-top: 15px;
+    color: $med-grey;
+    font-style: normal;
+    .btn{
+        margin-top: 15px;
     }
 }
 
@@ -70,19 +74,34 @@
         color: $lgt-grey;
     }
   }
+  .mid{
+    margin: 0 40px;
+  }
+  i{
+    margin: 0 7px;
+  }
 }
 
 .description{
     margin: 0;
     line-height: 35px;
-}
-
-.testimonial{
-    margin-top: 25px;
-    img{
-        float: left;
+    a{
+        color: $med-grey;
+        font-weight: 300;
+        border-bottom: 1px dotted #555;
+        padding-bottom: 2px;
+        &:hover{
+            color: white;
+        }
     }
 }
+
+// .testimonial{
+//     margin-top: 25px;
+//     img{
+//         float: left;
+//     }
+// }
 
 /* Content global */
 .content{
