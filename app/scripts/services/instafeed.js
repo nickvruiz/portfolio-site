@@ -8,9 +8,8 @@ angular.module('webApp')
       getInstas: function () {
         console.log("getting insta shit");
         var client_id = 'dfebeee8d16840879c66ca9bc298ae3c',
-            count = 10,
-            url = '/scripts/grams.json';
-            // url = 'https://api.instagram.com/v1/users/3/media/recent/?client_id=' + client_id + '&count=' + count;
+            count = 30,
+            url = 'https://api.instagram.com/v1/users/3/media/recent/?client_id=' + client_id + '&count=' + count;
 
         return $http.get(url);
       }

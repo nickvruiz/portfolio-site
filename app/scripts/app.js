@@ -58,9 +58,8 @@ angular.module('webApp', [
     $rootScope.routeLoading = false,
      $rootScope.hideMainNav = false;
 
-    $rootScope.scrollTop = function( e ){
+    $rootScope.scrollTop = function () {
       $window.scrollTo(0,0);
-      e.preventDefault();
     }
 
     $rootScope.$on('$routeChangeStart',

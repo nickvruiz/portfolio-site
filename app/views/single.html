@@ -4,12 +4,12 @@
     <h1 class="mega quattro">{{ slug }}</h1>
   </div>
 
-  <!-- Filter -->
+  <!-- Pagination - Uses paginate directive -->
   <div class="container">
     <ul class="col-md-12 list-inline filters charlie">
-      <li><a ng-href="#portfolio/{{ category }}/{{ prev }}" title="Previous"><i class="fa fa-caret-left"></i>Prev</a></li>
-      <li class="mid"><a ng-href="#portfolio" title="Back">ALL</a></li>
-      <li><a ng-href="#portfolio/{{ category }}/{{ next }}" title="Next">Next<i class="fa fa-caret-right"></i></a></li>
+      <li><a ng-href="#portfolio/{{ prevCat }}/{{ prev }}" title="Previous Project"><i class="fa fa-caret-left"></i>Prev</a></li>
+      <li class="mid"><a ng-href="#portfolio" title="All Portfolio Projects">ALL</a></li>
+      <li><a ng-href="#portfolio/{{ nextCat }}/{{ next }}" title="Next Project">Next<i class="fa fa-caret-right"></i></a></li>
     </ul>
   </div>
 </div>
@@ -63,9 +63,9 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-sm-4 col-xs-6 nopadding" ng-repeat="item in items">
-        <a class="thumbnail" href="#portfolio/{{ item.category }}/{{ item.id }}" title="{{ item.name }}" ng-mouseenter="thumbHover = false" ng-mouseleave="thumbHover = true">
+        <a class="thumbnail" href="#portfolio/{{ item.category }}/{{ item.id }}" title="{{ item.name }}" ng-mouseenter="thumbHover = true" ng-mouseleave="thumbHover = false">
             <img ng-src="images/portfolio/grid/{{ item.id }}.jpg" alt="">
-            <span class="my-elm bravo" ng-hide="thumbHover">{{ item.name }}</span>
+            <span class="my-elm bravo" ng-show="thumbHover">{{ item.name }}</span>
         </a>
       </div>
     </div>

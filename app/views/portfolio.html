@@ -19,9 +19,9 @@
 <div class="content dark-block">
   <div class="container">
     <div class="col-md-4 col-sm-4 col-xs-6 nopadding" ng-repeat="item in items | filter: category">
-        <a class="thumbnail" href="#portfolio/{{ item.category }}/{{ item.id }}" title="{{ item.name }}" ng-mouseenter="thumbHover = false" ng-mouseleave="thumbHover = true">
+        <a class="thumbnail" href="#portfolio/{{ item.category }}/{{ item.id }}" title="{{ item.name }}" ng-mouseenter="thumbHover = true" ng-mouseleave="thumbHover = false">
             <img ng-src="images/portfolio/grid/{{ item.id }}.jpg" alt="">
-            <span class="my-elm bravo" ng-hide="thumbHover">{{ item.name }}</span>
+            <span class="my-elm bravo" ng-show="thumbHover">{{ item.name }}</span>
         </a>
     </div>
   </div>

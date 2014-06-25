@@ -3,42 +3,43 @@
 angular.module('webApp')
   .controller('SingleCtrl', function ($scope, $routeParams, PortfolioRepo) {
 
-    // Our current portfolio piece id
-    var id = $routeParams.id;
-    // var calculatedId;
+    $scope.thumbHover = false;
 
-    // Hide hover effect on portfolio items
-    $scope.thumbHover = true;
-
-    // Grab JSON data
+    // Get data
     $scope.items = PortfolioRepo.getItems();
 
-    // Prev and next id
-    // function calulatePieceId(direction) {
-    //   if(direction == '-') {
-    //     if(id == 0) { calculatedId == $scope.items.length; }
-    //     if(id >= $scope.items.length) { calculatedId = id--; }
-    //   }
-    //   return calculatedId;
-    // };
+    var id        = $routeParams.id, // From url
+        newId     = parseInt(id),
+        lastPiece = $scope.items.length - 1;
 
-    // $scope.prev = calulatePieceId('-');
-    // $scope.next = ( id < $scope.items.length ) ? id == $scope.items.length : id++;
-    $scope.prev = parseInt(id) - 1;
-    $scope.next = parseInt(id) + 1;
+    // Scope variables from JSON
+    $scope.id       = id;
+    $scope.url      = $scope.items[id].url;
+    $scope.slug     = $scope.items[id].name;
+    $scope.desc     = $scope.items[id].description;
+    $scope.imgs     = $scope.items[id].images;
+    $scope.url      = $scope.items[id].url;
+    $scope.category = $scope.items[id].category;
 
-    // Create scope variables from JSON
-    $scope.id   = id;
-    $scope.url  = $scope.items[id].url;
-    $scope.slug = $scope.items[id].name;
-    $scope.desc = $scope.items[id].description;
-    $scope.imgs = $scope.items[id].images;
-    $scope.url  = $scope.items[id].url;
+    $scope.bar = ($scope.category == 'web' ? true : false);
 
-    // Create scope variable from Route Params category
-    $scope.category = $routeParams.category;
-
-    // Only show browser bar on web category images
-    $scope.bar = ($routeParams.category == 'web' ? true : false);
-
+    // Paginate - Needs refactoring
+    if( id == 0 ) {
+        $scope.prev = lastPiece;
+        $scope.next = newId + 1;
+        $scope.prevCat = $scope.items[lastPiece].category;
+        $scope.nextCat = $scope.items[newId + 1].category;
+    }
+    if( id == lastPiece ) {
+        $scope.next = 0;
+        $scope.prev = newId - 1;
+        $scope.prevCat = $scope.items[newId - 1].category;
+        $scope.nextCat = $scope.items[0].category;
+    }
+    if( id > 0 && id < lastPiece ) {
+        $scope.next = newId + 1;
+        $scope.prev = newId - 1;
+        $scope.prevCat = $scope.items[newId + 1].category;
+        $scope.nextCat = $scope.items[newId - 1].category;
+    }
   });
