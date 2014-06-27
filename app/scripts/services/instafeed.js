@@ -1,17 +1,21 @@
 'use strict';
 
 angular.module('webApp')
-  .factory('InstaFeed', function ($http) {
-
-    // Insta API
+  .factory('InstaFeed', function ($q, $timeout, $http) {
     return {
-      getInstas: function () {
-        console.log("getting insta shit");
+      getInstas: function(){
+        // Build url for instagram call
         var client_id = 'dfebeee8d16840879c66ca9bc298ae3c',
-            count = 30,
-            url = 'https://api.instagram.com/v1/users/3/media/recent/?client_id=' + client_id + '&count=' + count;
+            user_id   = '16658532',
+            count     = '30',
+            url       = 'https://api.instagram.com/v1/users/' + user_id + '/media/recent/?client_id=' + client_id + '&count=' + count + '&callback=JSON_CALLBACK';
 
-        return $http.get(url);
-      }
-    };
+        //Get data
+        var deferred = $q.defer();
+        $timeout(function() {
+          deferred.resolve($http.jsonp(url));
+        }, 1000);
+        return deferred.promise;
+       }
+    }
   });

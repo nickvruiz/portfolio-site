@@ -1,8 +1,9 @@
 'use strict';
 
 angular.module('webApp')
-  .controller('InstagramCtrl', ['$scope', 'grams', function ($scope, grams) {
+  .controller('InstagramCtrl', function ($scope, grams, InstaFeed) {
 
     $scope.thumbHover = true;
-    $scope.grams = grams.data;
-  }]);
+    $scope.grams = grams.data.data;
+
+  });

@@ -1,7 +1,5 @@
-$experimental-support-for-opera: true; // Optional, since it's off by default
-
 .contact{
-    @include experimental-value(height, calc(100% - 186px));
+    height: 100%;
     padding-top: 100px;
 }
 

@@ -41,9 +41,9 @@ angular.module('webApp', [
         templateUrl: 'views/instagram.html',
         controller: 'InstagramCtrl',
         resolve: { // Grab insta then load page
-          grams: function(InstaFeed){
+          grams: ['InstaFeed', function(InstaFeed){
             return InstaFeed.getInstas();
-          }
+          }]
         }
       })
 

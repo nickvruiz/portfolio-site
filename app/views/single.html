@@ -17,7 +17,7 @@
 <!-- More work section -->
 <div class="content grey-block caret-dn">
   <div class="container">
-    <div class="row text-center">
+    <div class="text-center">
       <p class="description bravo lato">{{ desc }}</p>
     </div>
   </div>
@@ -45,7 +45,7 @@
 <!-- Visit website link -->
 <div class="content dark-block">
     <div class="container">
-        <div class="row text-center">
+        <div class="text-center">
             <a ng-href="{{ url }}" class="btn" title="name" target="_blank">Visit Website</a>
         </div>
     </div>
@@ -54,15 +54,15 @@
 <!-- More work section -->
 <div class="content grey-block caret-dn">
   <div class="container">
-    <div class="row text-center">
+    <div class="text-center">
       <h2 class="quattro">VIEW MORE WORK</h1>
     </div>
   </div>
 </div>
 <div class="content">
   <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-sm-4 col-xs-6 nopadding" ng-repeat="item in items">
+    <div class="">
+      <div class="col-md-4 col-sm-4 col-xs-4 nopadding" ng-repeat="item in items">
         <a class="thumbnail" href="#portfolio/{{ item.category }}/{{ item.id }}" title="{{ item.name }}" ng-mouseenter="thumbHover = true" ng-mouseleave="thumbHover = false">
             <img ng-src="images/portfolio/grid/{{ item.id }}.jpg" alt="">
             <span class="my-elm bravo" ng-show="thumbHover">{{ item.name }}</span>
