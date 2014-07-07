@@ -10,9 +10,10 @@ angular.module('webApp')
             count     = '30',
             url       = 'https://api.instagram.com/v1/users/' + user_id + '/media/recent/?client_id=' + client_id + '&count=' + count + '&callback=JSON_CALLBACK';
 
-        //Get data
+        // Get data
         var deferred = $q.defer();
-        $timeout(function() {
+
+        $timeout(function() { // Wait a sec to resolve
           deferred.resolve($http.jsonp(url));
         }, 1000);
         return deferred.promise;

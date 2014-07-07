@@ -14,11 +14,11 @@ $fa:     'FontAwesome';
 
 
 /* Font size */
-$mega:  4.5em;
-$alpha: 2.769em;
-$bravo: 1.385em;
-$charlie: 1.2em;
-$delta: .85em;
+$mega:    4.5rem;
+$alpha:   2.769rem;
+$bravo:   1.385rem;
+$charlie: 1.2rem;
+$delta:   1rem;
 
 .mega   { font-size: $mega;    }
 .alpha  { font-size: $alpha;   }
@@ -28,10 +28,11 @@ $delta: .85em;
 
 
 /* Color palette */
+$mobile-grey:      #333333;
 $med-grey:         #AEAEAE;
 $lgt-grey:         #E9E9E9;
 $drk-green:        #655B45;
-$gry-block:        #2F2F2F;
+$gry-block:        #222222;
 $slogan-border:    #5A5A5A;
 
 
@@ -61,9 +62,10 @@ html{
     position: relative;
     width: 100%;
     height: 100%;
-    font-size: 14px;
+    font-size: 95%;
     line-height: 18px;
     font-family: $lato;
+    background: $gry-block;
 }
 
 a{

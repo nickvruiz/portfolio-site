@@ -62,7 +62,7 @@
 <div class="content">
   <div class="container">
     <div class="">
-      <div class="col-md-4 col-sm-4 col-xs-4 nopadding" ng-repeat="item in items">
+      <div class="thumb col-md-4 col-sm-4 col-xs-4 nopadding" ng-repeat="item in items">
         <a class="thumbnail" href="#portfolio/{{ item.category }}/{{ item.id }}" title="{{ item.name }}" ng-mouseenter="thumbHover = true" ng-mouseleave="thumbHover = false">
             <img ng-src="images/portfolio/grid/{{ item.id }}.jpg" alt="">
             <span class="my-elm bravo" ng-show="thumbHover">{{ item.name }}</span>
@@ -73,7 +73,7 @@
 </div>
 
 <!-- Footer -->
-<footer class="content">
+<footer class="content dark-block">
   <div class="container">
     <div class="col-md-12">
       <h3 class="lato">Nick V Ruiz</h3>

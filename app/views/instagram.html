@@ -1,37 +1,34 @@
 <!-- Page meta -->
-<div class="content jumbo text-center clearfix">
+<div class="content jumbo dark-block text-center clearfix">
   <div class="top container">
     <h1 class="mega quattro">INSTAGRAM</h1>
-    <!-- <small class="bravo">Yeah, it's a live feed, hover for filters</small> -->
+    <!-- <small class="bravo">some stuff</small> -->
   </div>
 </div>
 
 <!-- Stats section -->
 <div class="content grey-block caret-dn">
   <div class="container">
-    <div class="row text-center">
+    <div class="text-center">
       <p class="description bravo lato">Bred for his skills in magic. # Phone cam and instagram</p>
     </div>
   </div>
 </div>
 
-<!-- Portfolio items -->
-<div class="content dark-block">
+<!-- Grams -->
+<div class="content">
     <div class="container">
-        <div class="row">
-            <h4>{{ nickmessage }}</h4>
-            <div class="col-md-4 col-sm-4 col-xs-4 nopadding" ng-repeat="gram in grams">
-                <a class="thumbnail" href="{{ gram.id }}" title="{{ gram.link }}" ng-mouseenter="thumbHover = false" ng-mouseleave="thumbHover = true">
-                    <img ng-src="{{ gram.images.low_resolution.url }}" alt="">
-                    <span class="my-elm bravo" ng-hide="thumbHover">{{ gram.filter }}</span>
-                </a>
-            </div>
-        </div>
+      <div class="thumb col-md-4 col-sm-4 col-xs-4 nopadding" ng-repeat="gram in grams">
+        <a class="thumbnail" href="{{ gram.link }}" title="{{ gram.caption.text }}" target="_blank" ng-mouseenter="thumbHover = false" ng-mouseleave="thumbHover = true">
+          <img ng-src="{{ gram.images.low_resolution.url }}" alt="">
+          <span class="my-elm bravo" ng-hide="thumbHover">{{ gram.filter }}</span>
+        </a>
+      </div>
     </div>
 </div>
 
 <!-- Footer -->
-<footer class="content">
+<footer class="content dark-block">
   <div class="container">
     <div class="col-md-12">
       <h3 class="lato">Nick V Ruiz</h3>
