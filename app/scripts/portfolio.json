@@ -25,5 +25,50 @@
         "description": "Jac Vanek was in need of a new website, blog and online shop. So, we utilized the CMS power of Wordpress / Woocommerce together to create a central hub managing the new site, blog and online store.",
         "images": [0,1,2,3,4,5,6],
         "url": "http://jacvanek.com"
+    },
+    {
+        "id": 3,
+        "name": "Element Made To Endure",
+        "category": "web",
+        "tag": "client",
+        "description": "",
+        "images": [0,1,2],
+        "url": ""
+    },
+    {
+        "id": 4,
+        "name": "Element Eden Artist Search",
+        "category": "web",
+        "tag": "client",
+        "description": "Element Eden Artist Search",
+        "images": [0,1,2],
+        "url": "http://us.elementeden.com/e/artist-search/"
+    },
+    {
+        "id": 5,
+        "name": "Jac Van-Tastic",
+        "category": "web",
+        "tag": "client",
+        "description": "Jac Van-Tastic",
+        "images": [0],
+        "url": "http://us.elementeden.com/e/jac-van-tastic"
+    },
+    {
+        "id": 6,
+        "name": "Make It Count",
+        "category": "web",
+        "tag": "client",
+        "description": "Make It Count",
+        "images": [0],
+        "url": "http://us.elementbrand.com/e/make-it-count"
+    },
+    {
+        "id": 7,
+        "name": "Popcorn Brain",
+        "category": "web",
+        "tag": "personal",
+        "description": "Popcorn Brain",
+        "images": [0,1,2,3],
+        "url": ""
     }
 ]

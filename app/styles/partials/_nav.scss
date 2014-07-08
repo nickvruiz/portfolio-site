@@ -22,8 +22,9 @@
         font-weight: 100;
         line-height: 160px;
         text-align: center;
-        border: 1px solid $med-grey;
+        // border: 1px solid $med-grey;
         @include single-transition(all, 150ms, linear);
+        background: $drk-grey;
     }
     a:hover{
         line-height: 155px;
