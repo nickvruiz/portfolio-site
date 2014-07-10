@@ -1,12 +1,9 @@
 'use strict';
 
 angular.module('webApp')
-  .controller('PortfolioCtrl', function ($scope, PortfolioRepo) {
+  .controller('PortfolioCtrl', function ($scope, pieces, PortfolioRepo) {
 
-    // Hide hover
     $scope.thumbHover = false;
-
-    // Get portfolio data
-    $scope.items = PortfolioRepo.getItems();
+    $scope.items = pieces.data;
 
   });

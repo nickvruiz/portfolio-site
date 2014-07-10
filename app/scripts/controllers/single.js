@@ -1,12 +1,10 @@
 'use strict';
 
 angular.module('webApp')
-  .controller('SingleCtrl', function ($scope, $routeParams, PortfolioRepo) {
+  .controller('SingleCtrl', function ($scope, pieces, $routeParams, PortfolioRepo) {
 
     $scope.thumbHover = false;
-
-    // Get data
-    $scope.items = PortfolioRepo.getItems();
+    $scope.items = pieces.data;
 
     var id        = $routeParams.id, // From url
         newId     = parseInt(id),

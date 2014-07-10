@@ -4,16 +4,16 @@
         "name": "Good Libations Brewing",
         "category": "web",
         "tag": "client",
-        "description": "Design & developement - Custom WordPress and Shopify theme.",
+        "description": "Good Libations Brewing is a startup brewery out of Texas. They were in need of a new website and wanted a matching Shopify theme to go along. The beer labels and company logo were previously created so I formed the mockups around them. Once approved, I continued to build out the initial site in Wordpress then translated it to a custom Shopify theme.",
         "images": [0,1,2,3,4,5,6],
         "url": "http://goodlibationsbrewing.com"
     },
     {
         "id": 1,
-        "name": "LRDS in Ocatillo",
+        "name": "LRDS in Ocotillo",
         "category": "photo",
         "tag": "client",
-        "description": "For this photoshoot we drove out to Ocatillo. Lucky for us, rain clouds had filled the sky making for an interesting background.",
+        "description": "Going on location for photoshoots is a ton of fun. For this trip, I headed out to Ocotillo Wells with the LRDS brothers to get some promotional photos. Other than some intermittent rain, everyting went smooth and they were happy with the final products.",
         "images": [0,1,2,3,4,5],
         "url": "http://lrds.tv"
     },
@@ -22,7 +22,7 @@
         "name": "Jac Vanek",
         "category": "web",
         "tag": "client",
-        "description": "Jac Vanek was in need of a new website, blog and online shop. So, we utilized the CMS power of Wordpress / Woocommerce together to create a central hub managing the new site, blog and online store.",
+        "description": "Jac Vanek was in need of a new website, blog and online shop. I utilized the CMS power of Wordpress and Woocommerce to create a central hub managing the new site, blog and online store. This is my first and favorite of a series of mockups created for the site.",
         "images": [0,1,2,3,4,5,6],
         "url": "http://jacvanek.com"
     },
@@ -31,16 +31,16 @@
         "name": "Element Made To Endure",
         "category": "web",
         "tag": "client",
-        "description": "",
+        "description": "Element wanted an app in their online store above the denim / pants category. The app needed to allow consumers to watch videos, interact with a fitguide and browse colorways. The challenge was to pack lots of content into a small space. My solution was to create a simple slider combined with the Youtube player API that controlled video playback.",
         "images": [0,1,2],
-        "url": ""
+        "url": "http://us.shop.elementbrand.com/w/mens/denim-pants"
     },
     {
         "id": 4,
         "name": "Element Eden Artist Search",
         "category": "web",
         "tag": "client",
-        "description": "Element Eden Artist Search",
+        "description": "Element Eden came to me with a contest concept called the Artist Search. They had a separate series of instructions for artists and non artists to follow in order to enter. The challege was presenting each set of intructions based on who was entering. The final result was a single page site that started with a splash page asking for the customers interest. The page then scrolled ( left or right ) to the respected intructions where you could further interact or go back to the starting screen.",
         "images": [0,1,2],
         "url": "http://us.elementeden.com/e/artist-search/"
     },
@@ -49,7 +49,7 @@
         "name": "Jac Van-Tastic",
         "category": "web",
         "tag": "client",
-        "description": "Jac Van-Tastic",
+        "description": "This was a quick, single page project created for an Element Eden X Jac Vanek Halloween collaboration. They sent a handfull of raw images which were then clipped out to create the outfit thumbnails you see below. The rest is a combination of HTML, CSS and jQuery for the hover effect.",
         "images": [0],
         "url": "http://us.elementeden.com/e/jac-van-tastic"
     },
@@ -58,7 +58,7 @@
         "name": "Make It Count",
         "category": "web",
         "tag": "client",
-        "description": "Make It Count",
+        "description": "Each year Element puts on an international skateboarding contest. They take the finalists from each event and fly them out to California where they compete in the finals. This year, I built the single page site to house all the Make It Count events, media and info.",
         "images": [0],
         "url": "http://us.elementbrand.com/e/make-it-count"
     },
@@ -67,7 +67,7 @@
         "name": "Popcorn Brain",
         "category": "web",
         "tag": "personal",
-        "description": "Popcorn Brain",
+        "description": "I created this informative site as a class project to show the effects of a habit called Popcorn Brain. The home page displays a short introductory paragraph with a full-page timelapse video playing in the background. Each page then slides forward and backward as you navigate. You are quickly lead to the quiz page that adds up the average time you spend in front of sceens each day.",
         "images": [0,1,2,3],
         "url": ""
     }

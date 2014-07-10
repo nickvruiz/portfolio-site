@@ -19,12 +19,22 @@ angular.module('webApp', [
 
       .when('/portfolio', {
         templateUrl: 'views/portfolio.html',
-        controller: 'PortfolioCtrl'
+        controller: 'PortfolioCtrl',
+        resolve: { // Grab portfolios then load page
+          pieces: ['PortfolioRepo', function(PortfolioRepo){
+            return PortfolioRepo.getItems();
+          }]
+        }
       })
 
       .when('/portfolio/:category/:id', {
         templateUrl: 'views/single.html',
-        controller: 'SingleCtrl'
+        controller: 'SingleCtrl',
+        resolve: { // Grab portfolios then load page
+          pieces: ['PortfolioRepo', function(PortfolioRepo){
+            return PortfolioRepo.getItems();
+          }]
+        }
       })
 
       .when('/about', {
@@ -64,13 +74,12 @@ angular.module('webApp', [
 
     $rootScope.$on('$routeChangeStart',
       function () {
-      $rootScope.routeLoading = true;
       $rootScope.scrollTop();
+      $rootScope.routeLoading = true;
     });
 
     $rootScope.$on('$routeChangeSuccess',
       function () {
-      $window.scrollTo(0,0);
       $rootScope.routeLoading = false;
     });
 
