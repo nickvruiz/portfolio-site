@@ -14,7 +14,10 @@
   }
 
   .nav-items{
-    a{ font-weight: 400; }
+    a{
+      font-weight: 400;
+      background: $mobile-nav-bg;
+    }
   }
 
   .slogan{
@@ -73,6 +76,7 @@
         line-height: 60px;
         font-weight: 300;
         border: 0;
+        background: none;
     }
     a:hover{
         line-height: 60px;

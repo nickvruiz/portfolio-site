@@ -10,7 +10,9 @@ angular.module('webApp')
         var deferred = $q.defer();
 
         $timeout(function() { // Wait a sec to resolve
-          console.log($http.get(url));
+
+          // console.log($http.get(url));
+
           deferred.resolve($http.get(url));
         }, 1000);
         return deferred.promise;

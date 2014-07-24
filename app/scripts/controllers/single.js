@@ -4,13 +4,12 @@ angular.module('webApp')
   .controller('SingleCtrl', function ($scope, pieces, $routeParams, PortfolioRepo) {
 
     $scope.thumbHover = false;
-    $scope.items = pieces.data;
 
-    var id        = $routeParams.id, // From url
-        newId     = parseInt(id),
-        lastPiece = $scope.items.length - 1;
+    var id = $routeParams.id; // From url
 
     // Scope variables from JSON
+    $scope.items = pieces.data;
+
     $scope.id       = id;
     $scope.url      = $scope.items[id].url;
     $scope.slug     = $scope.items[id].name;
@@ -21,23 +20,40 @@ angular.module('webApp')
 
     $scope.bar = ($scope.category == 'web' ? true : false);
 
-    // Paginate - Needs refactoring
-    if( id == 0 ) {
-        $scope.prev = lastPiece;
-        $scope.next = newId + 1;
-        $scope.prevCat = $scope.items[lastPiece].category;
-        $scope.nextCat = $scope.items[newId + 1].category;
+    // Next & Previous buttons
+    function pagination (id, numPortItems) {
+        var last = numPortItems - 1,
+             cur = parseInt(id);
+
+        return {
+            next: function () {
+                if(cur >= 0 && cur < last) {
+                    return cur + 1;
+                } else {
+                    return 0;
+                }
+            },
+            prev: function () {
+                if(cur > 0 && cur <= last) {
+                    return cur - 1;
+                } else {
+                    return last;
+                }
+            }
+        }
     }
-    if( id == lastPiece ) {
-        $scope.next = 0;
-        $scope.prev = newId - 1;
-        $scope.prevCat = $scope.items[newId - 1].category;
-        $scope.nextCat = $scope.items[0].category;
-    }
-    if( id > 0 && id < lastPiece ) {
-        $scope.next = newId + 1;
-        $scope.prev = newId - 1;
-        $scope.prevCat = $scope.items[newId + 1].category;
-        $scope.nextCat = $scope.items[newId - 1].category;
-    }
+
+    // Init paginate
+    var paginate = pagination($routeParams.id, $scope.items.length),
+          nextId = paginate.next(),
+          prevId = paginate.prev();
+
+    // Next & Prev Id
+    $scope.next = nextId;
+    $scope.prev = prevId;
+
+    // Set categories based on Next & Prev ID
+    $scope.prevCat = pieces.data[prevId].category;
+    $scope.nextCat = pieces.data[nextId].category;
+
   });
