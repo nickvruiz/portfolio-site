@@ -21,8 +21,8 @@ angular.module('webApp')
     $scope.bar = ($scope.category == 'web' ? true : false);
 
     // Next & Previous buttons
-    function pagination (id, numPortItems) {
-        var last = numPortItems - 1,
+    function pagination (id, numItems) {
+        var last = numItems - 1,
              cur = parseInt(id);
 
         return {
